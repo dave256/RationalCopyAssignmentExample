@@ -33,13 +33,11 @@ bool Rational::set(int n, int d) {
 }
 
 Rational::Rational(const Rational &r) { 
-    _num = r._num;
-    _den = r._den;
+    memcpy(this, &r, sizeof(Rational));
 }
 
 Rational &Rational::operator=(const Rational &r) { 
-    _num = r._num;
-    _den = r._den;
+    memcpy(this, &r, sizeof(Rational));
     return *this;
 }
 

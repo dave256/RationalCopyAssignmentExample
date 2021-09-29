@@ -30,6 +30,9 @@ public:
     // default values specified in header file but not implementation
     Rational(int n = 0, int d = 1);
 
+    Rational(const Rational &r);
+    Rational& operator=(const Rational &r);
+
     // mutating method
     bool set(int n, int d);
 

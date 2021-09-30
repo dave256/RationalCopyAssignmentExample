@@ -32,6 +32,17 @@ bool Rational::set(int n, int d) {
     }
 }
 
+Rational::Rational(const Rational &r) { 
+    _num = r._num;
+    _den = r._den;
+}
+
+Rational &Rational::operator=(const Rational &r) { 
+    _num = r._num;
+    _den = r._den;
+    return *this;
+}
+
 // note since these are not part of the class (standalone functions),
 // we do not use Rational:: in front of the names of the functions
 
